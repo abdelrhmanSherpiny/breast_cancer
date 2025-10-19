@@ -1,0 +1,32 @@
+from pydantic import Field, BaseModel
+
+class PatientData(BaseModel):
+    radius_mean: float = Field(..., description="Mean of distances from center to points on the perimeter")
+    texture_mean: float = Field(..., description="Standard deviation of gray-scale values")
+    perimeter_mean: float = Field(..., description="Mean size of the core tumor")
+    area_mean: float = Field(..., description="Mean area of the core tumor")
+    smoothness_mean: float = Field(..., description="Mean of local variation in radius lengths")
+    compactness_mean: float = Field(..., description="Mean of perimeter^2 / area - 1.0")
+    concavity_mean: float = Field(..., description="Mean severity of concave portions of the contour")
+    concave_points_mean: float = Field(..., description="Mean number of concave portions of the contour")
+    symmetry_mean: float = Field(..., description="Mean symmetry")
+    radius_se: float = Field(..., description="Standard error for radius")
+    perimeter_se: float = Field(..., description="Standard error for perimeter")
+    area_se: float = Field(..., description="Standard error for area")
+    smoothness_se: float = Field(..., description="Standard error for smoothness")
+    compactness_se: float = Field(..., description="Standard error for compactness")
+    concavity_se: float = Field(..., description="Standard error for concavity")
+    concave_points_se: float = Field(..., description="Standard error for concave points")
+    symmetry_se: float = Field(..., description="Standard error for symmetry")
+    radius_worst: float = Field(..., description="Worst radius value")
+    texture_worst: float = Field(..., description="Worst texture value")
+    perimeter_worst: float = Field(..., description="Worst perimeter value")
+    area_worst: float = Field(..., description="Worst area value")
+    smoothness_worst: float = Field(..., description="Worst smoothness value")
+    compactness_worst: float = Field(..., description="Worst compactness value")
+    concavity_worst: float = Field(..., description="Worst concavity value")
+    concave_points_worst: float = Field(..., description="Worst concave points value")
+    symmetry_worst: float = Field(..., description="Worst symmetry value")
+    fractal_dimension_worst: float = Field(..., description="Worst fractal dimension value")
+
+    
